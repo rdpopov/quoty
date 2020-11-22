@@ -2,13 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rosko/.oh-my-zsh"
+export ZSH="/home/rosen/.oh-my-zsh"
 sh ~/.config/quoty/quoty.sh
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,11 +69,17 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+source ~/antigen.zsh
+antigen bundle git
+antigen bundle colorize
+antigen bundle thefuck
+antigen bundle themes
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle colored-man-pages
+antigen bundle command-not-found
+antigen apply
 source $ZSH/oh-my-zsh.sh
-export PATH=/home/rosko/.local/bin:$PATH
-export PATH=/home/rosko/.nimble/bin:$PATH
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -98,3 +105,8 @@ export PATH=/home/rosko/.nimble/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH=/home/rosen/.local/bin:$PATH
+export PATH=/home/rosen/.nimble/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
