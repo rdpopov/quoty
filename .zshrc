@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/rosen/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 sh ~/.config/quoty/quoty.sh
 
 # Set name of the theme to load --- if set to "random", it will
@@ -72,7 +72,6 @@ ZSH_THEME="af-magic"
 source ~/antigen.zsh
 antigen bundle git
 antigen bundle colorize
-antigen bundle thefuck
 antigen bundle themes
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle colored-man-pages
@@ -106,7 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=/home/rosen/.local/bin:$PATH
-export PATH=/home/rosen/.nimble/bin:$PATH
-
+export PATH=/home/$USER/.local/bin:$PATH
+export PATH=/home/$USER/.nimble/bin:$PATH
+export EDITOR='/usr/bin/nvim'
+export VISUAL='/usr/bin/nvim'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
