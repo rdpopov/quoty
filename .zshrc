@@ -107,6 +107,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=/home/$USER/.local/bin:$PATH
 export PATH=/home/$USER/.nimble/bin:$PATH
-export EDITOR='/usr/bin/nvim'
-export VISUAL='/usr/bin/nvim'
+
+$(which nvim > /dev/null) && export EDITOR='/usr/bin/nvim'
+$(which nvim > /dev/null) && export VISUAL='/usr/bin/nvim'
+$(which starship > /dev/null) && eval "$(starship init zsh)"  
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
