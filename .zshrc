@@ -113,3 +113,4 @@ $(which nvim > /dev/null) && export VISUAL='/usr/bin/nvim'
 $(which starship > /dev/null) && eval "$(starship init zsh)"  
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export TERM=xterm-256color
